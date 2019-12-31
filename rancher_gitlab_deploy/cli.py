@@ -77,7 +77,7 @@ def main(rancher_url, rancher_key, rancher_secret, environment, stack, service, 
         bail("The Rancher URL doesn't look right")
 
     proto, host = rancher_url.split("://")
-    api = "%s://%s/v1" % (proto, host)
+    api = "%s://%s/v3" % (proto, host)
     stack = stack.replace('.', '-')
     service = service.replace('.', '-')
 
